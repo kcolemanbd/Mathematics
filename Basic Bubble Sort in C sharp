@@ -1,0 +1,42 @@
+# Basic-Bubble-Sort-in-C-Sharp
+#  Created by Keith Coleman on 11/26/16.
+#  Copyright © 2016 Keith Coleman. All rights reserved.
+#
+
+using System;
+using System.Collections.Generic;
+using System.Collections;
+public class SimpleBubbleSort
+{
+	public static void main(string[] args)
+	{
+		string[] Array;
+		Array=new string[10];
+		string temp;
+		
+		Scanner input=new Scanner(System.in);
+			
+		for(int i=0;i<10;i++){
+			Console.WriteLine(“Enter Name ");
+			Array[i]=input.next();
+			}
+		
+	for(int x=1;x<10;x++)
+		{
+		for(int y=0;y<10-x;y++)
+			{
+			if(Array[y].compareTo(Array[y+1])>0)
+				{
+				temp=Array[y];
+				Array[y]=Array[y+1];
+				Array[y+1]=temp;
+				
+				}
+				}
+				}
+						
+	for(int i=0;i<10;i++){
+		Console.WriteLine("The Sorted Array is "+Array[i]);
+		}	
+		}
+		}
